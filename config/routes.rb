@@ -15,7 +15,12 @@ get 'feed', to: 'feed#show'
        delete 'unfollow', to: 'follows#destroy'
      end
   end
-  resources :items
+  resources :items do
+    member do
+      post 'vote', to: "votes#create"
+      delete 'unvote', to: 'votes#destroy'
+    end
+  end
   resources :tweets
   
   root 'pages#home'
