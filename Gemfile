@@ -41,6 +41,7 @@ gem 'devise'
 gem 'activeadmin', '~> 1.1'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower'
 gem 'acts_as_votable', '~> 0.10.0'
+gem "paperclip", '~> 5.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
