@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-    <div class="card card-block">
+      <div class="card card-block">
+      <% if user_signed_in? %>
         <h4 class="card-title">Your Account</h4>
       <p class="card-text"> <%  link to current_user.username, user_ path(current_user.username) %> </p>
+      <% else %>
+      <p class="card-text"> <%  link to "Sign up now!", signup_path %> </p>
       <a href="#" class="card-link">Card Link</a>
       <a href="#" class="card-link">Another Link</a>
   </div>
